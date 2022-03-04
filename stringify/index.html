@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <script type="module">
+            import { FontStringify } from "../../src/lib/font/stringify.js";
+            
+            const font = {
+                // Here the name of the font you want to deserialize.
+                name: "Khula",
+                // Here the source of the font file you want to deserialize.
+                src: "https://fonts.gstatic.com/s/khula/v2/ejnuT9e7WWqo9JwXnUYzc4DGDUGfDkXyfkzVDelzfFk.woff2"
+            };
+            
+            FontStringify(font.name, font.src).then(result => console.log(result));
+        </script>
+        <title>Stringify</title>
+    </head>
+    <body>
+        This is a tool created to deserialize a font file in order to obtain a valid JSON format
+        that can be appended to the fonts database.
+    </body>
+</html>
